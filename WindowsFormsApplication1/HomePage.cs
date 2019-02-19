@@ -110,6 +110,13 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else if (!(textBox2.Text == "" || dateTimePicker2.Text == "" || comboBox7.Text == "" || textBox5.Text == "" || comboBox8.Text == "" || comboBox9.Text == "" || textBox6.Text == ""))
+            {
+                if (textBox2.Text == "" && comboBox7.Text == "" && textBox5.Text == "" && comboBox8.Text == "" && comboBox9.Text == "" && textBox6.Text == "")
+                {
+                    MessageBox.Show("Please fill in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     if (textBox2.Text == "")
@@ -144,19 +151,16 @@ namespace WindowsFormsApplication1
                     {
                         MessageBox.Show("Invalid name, can have Alphabets and space of 6 to 75 characters.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox2.Focus();
-                        return;
                     }
                     if (!Regex.Match(textBox5.Text, "^[0-9]{4,}").Success)
                     {
                         MessageBox.Show("Invalid salary, can have only numbers more than 1000.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox5.Focus();
-                        return;
                     }
                     if (!Regex.Match(textBox6.Text, "^[0-9]{0,2}").Success)
                     {
                         MessageBox.Show("Invalid number of children, can have only numbers", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox5.Focus();
-                        return;
                     }
                 }
             }
