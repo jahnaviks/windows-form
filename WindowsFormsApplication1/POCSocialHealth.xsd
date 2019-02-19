@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="POCSocialHealth" targetNamespace="http://tempuri.org/POCSocialHealth.xsd" xmlns:mstns="http://tempuri.org/POCSocialHealth.xsd" xmlns="http://tempuri.org/POCSocialHealth.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="POCConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="POCConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.POCConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SocialClubTableAdapter" GeneratorDataComponentClassName="SocialClubTableAdapter" Name="SocialClub" UserDataComponentName="SocialClubTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="POCConnectionString (Settings)" DbObjectName="POC.dbo.SocialClub" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT healthstatus FROM dbo.SocialClub</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="healthstatus" DataSetColumn="healthstatus" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="POCConnectionString (Settings)" DbObjectName="POC.dbo.SocialClub" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT distinct healthstatus FROM dbo.SocialClub</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="POCSocialHealth" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="POCSocialHealth" msprop:Generator_UserDSName="POCSocialHealth">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SocialClub" msprop:Generator_TableClassName="SocialClubDataTable" msprop:Generator_TableVarName="tableSocialClub" msprop:Generator_RowChangedName="SocialClubRowChanged" msprop:Generator_TablePropName="SocialClub" msprop:Generator_RowDeletingName="SocialClubRowDeleting" msprop:Generator_RowChangingName="SocialClubRowChanging" msprop:Generator_RowEvHandlerName="SocialClubRowChangeEventHandler" msprop:Generator_RowDeletedName="SocialClubRowDeleted" msprop:Generator_RowClassName="SocialClubRow" msprop:Generator_UserTableName="SocialClub" msprop:Generator_RowEvArgName="SocialClubRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="healthstatus" msprop:Generator_ColumnVarNameInTable="columnhealthstatus" msprop:Generator_ColumnPropNameInRow="healthstatus" msprop:Generator_ColumnPropNameInTable="healthstatusColumn" msprop:Generator_UserColumnName="healthstatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
